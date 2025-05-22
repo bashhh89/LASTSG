@@ -1,35 +1,68 @@
-# Node.js
-node_modules/
-npm-debug.log
-yarn-debug.log
-yarn-error.log
-.pnpm-debug.log
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# Next.js
-.next/
-out/
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
 
-# Environment variables
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-temp.env
+# testing
+/coverage
 
-# Build files
-build/
-dist/
+# next.js
+/.next/
+/out/
 
-# Debug
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.pnpm-debug.log*
 
-# Misc
-.DS_Store
-*.pem
-Thumbs.db
+# local env files
+.env*.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*
+temp.env
+becauseagentcantseeenv
+ff
+.example
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# Files containing potential API keys
+test-env.js
+forcursor
+forthefailures
+test-property-real-estate-questions.js
+*firebase*key*.json
+*openai*key*.txt
+*api*key*.txt
+*api*secret*.txt
+*secret*.json
+*credential*.json
+*token*.json
+
+# Other sensitive files
+temp-repo/
 
 # IDE
 .idea/
@@ -37,6 +70,28 @@ Thumbs.db
 *.swp
 *.swo
 
+# PDF outputs (these can be regenerated)
+*.pdf
+
+# pnpm
+.pnpm/
+
+# Ignore parent node_modules
+../node_modules/
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+.pnpm-debug.log
+
 # Temporary files
 *.log
-*.tmp 
+*.tmp
+
+# Production deployment files (these can be regenerated)
+PRODUCTION_DEPLOYMENT_CHECKLIST.md
+setup-pm2-production.bat
+verify-deploy-readiness.js
+build-production.js 
